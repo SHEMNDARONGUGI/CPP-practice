@@ -17,7 +17,11 @@ int main()
         cout<<a<<" is bigger in the numbers given"<<endl;
     }
     else if(c>a && c>b){
+<<<<<<< HEAD
+        cout<<c<<" is bigger in the numbers given"<<endl;
+=======
         cout<<c<<" is bigger in the the numbers given"<<endl;
+>>>>>>> 58451e975fdafc94719f1419af236686cf3f140e
     }
     else{
         cout<<b<<" is bigger in the numbers give"<<endl;
