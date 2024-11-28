@@ -16,8 +16,8 @@ int main()
     if(a > c && a>b){
         cout<<a<<" is bigger in the numbers given"<<endl;
     }
-    else if(c>a and c>b){
-        cout<<c<<" is bigger in the the numbers given"<<endl;
+    else if(c>a && c>b){
+        cout<<c<<" is bigger in the numbers given"<<endl;
     }
     else{
         cout<<b<<" is bigger in the numbers give"<<endl;
