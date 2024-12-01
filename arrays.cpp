@@ -23,5 +23,7 @@ int main()
         cout<< endl;
     }
 
+    cout<<scores[3][1];
+
     return 0;
 }
