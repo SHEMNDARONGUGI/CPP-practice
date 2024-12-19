@@ -1,7 +1,9 @@
 //Most shapes require one or two dimensions to complete their area or perimeter. Write code that captures this generalization of dimensions and are( area should be a pure virtual function) in one abstract base class and shows the specializations of the shapes for the square and the rectangle classes both of which are derived from the said abstract base class.
 
 #include <iostream>
-using namespace std;
+#include <memory>  // For std::unique_ptr
+
+using namespace std;  // This allows us to use types like 'unique_ptr' without prefixing 'std::'
 
 // Abstract base class
 class Shape {
@@ -43,17 +45,16 @@ public:
 };
 
 int main() {
-    // Create a square and a rectangle
-    Shape* square = new Square(4.0); // Side length of 4
-    Shape* rectangle = new Rectangle(4.0, 5.0); // Length 4, Width 5
+    // Create a square and a rectangle using unique_ptr
+    unique_ptr<Shape> square = make_unique<Square>(4.0); // Side length of 4
+    unique_ptr<Shape> rectangle = make_unique<Rectangle>(4.0, 5.0); // Length 4, Width 5
 
     // Calculate and display areas
     cout << "Area of Square: " << square->area() << endl; // Output: 16
     cout << "Area of Rectangle: " << rectangle->area() << endl; // Output: 20
 
-    // Clean up memory
-    delete square;
-    delete rectangle;
-
+    // No need for manual cleanup, memory is automatically cleaned up when unique_ptr goes out of scope.
+    
     return 0;
 }
+
