@@ -16,6 +16,8 @@ int main()
 };
 
 
+// outputting the array in an orderly manner
+
     for(int i=0; i<4; i++){
         for(int k=0; k<4; k++){
             cout<<setw(15)<<right<< scores[i][k]<<" ";
@@ -23,7 +25,9 @@ int main()
         cout<< endl;
     }
 
-    cout<<scores[3][1];
+    // accessing an element within the array
+
+    cout<<scores[0][0];
 
     return 0;
 }
