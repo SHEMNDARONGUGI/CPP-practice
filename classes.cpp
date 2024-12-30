@@ -28,4 +28,10 @@ int main()
     employee2.EmployeeNo = "HR-2341";
     employee2.Age = 35;
     employee2.IntroduceYourself();
+
+    Employee employee2;
+    employee2.name = "Steve";
+    employee2.EmployeeNo = "HR-2341";
+    employee2.Age = 35;
+    employee2.IntroduceYourself();
 }
