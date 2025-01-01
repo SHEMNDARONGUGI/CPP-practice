@@ -13,25 +13,24 @@ public:
         cout<<"Age - "<< Age<<endl;
         cout<<endl;
     }
+public:
+    Employee(string n, string employee_no, int age){
+        name = n;
+        EmployeeNo = employee_no;
+        Age  = age;
+        
+
+    }
 };
 
 int main()
 {
-    Employee employee1;
-    employee1.name = "Shem";
-    employee1.EmployeeNo = "ICT-1201";
-    employee1.Age = 23;
+    //invoke constructor
+    Employee employee1 = Employee("Shem", "Microsoft", 23);
     employee1.IntroduceYourself();
 
-    Employee employee2;
-    employee2.name = "Steve";
-    employee2.EmployeeNo = "HR-2341";
-    employee2.Age = 35;
+    Employee employee2 = Employee("Glory", "KNH", 24);
     employee2.IntroduceYourself();
 
-    Employee employee2;
-    employee2.name = "Steve";
-    employee2.EmployeeNo = "HR-2341";
-    employee2.Age = 35;
-    employee2.IntroduceYourself();
+    return 0;
 }
