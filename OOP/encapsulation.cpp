@@ -26,7 +26,7 @@ public:
     }
 
     void setAge(int A){
-        if(A >= 18)
+        if(A >=18)
         Age = A;
     }
     int getAge(){
