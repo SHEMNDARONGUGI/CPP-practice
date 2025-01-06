@@ -57,6 +57,10 @@ public:
         cout<<endl;
     }
 
+    virtual void Work(){//polymorphism when a virtual function is invoked it check if there is implementation of this function in the derived class and if yes execute that instead
+        cout<<Name<<" is checking email, task backlog, performing tasks..."<<endl;
+    }
+
     void Employee_Details(){
         cout<<"Name: "<< Name << endl;
         cout<<"Company: "<< Company<<endl;
@@ -88,6 +92,10 @@ public:
     void FixBug(){
         cout<<Name<<" fixed bug using "<<FavoriteLanguage<<endl;
     }
+
+    void Work(){//polymorphism
+        cout<<Name<<" is writing code in "<< FavoriteLanguage <<endl;
+    }
 };
 
 class Teacher: public Employee{// add public to access the properties
@@ -101,8 +109,13 @@ public:
     Teacher(string N,string C, int A,string subject) : Employee(N,C,A){
         Subject = subject;
     }
+
+     void Work(){//polymorphism
+        cout<<Name<<" is teaching "<<Subject <<endl;
+    }
 };
 
+//the most common use of polymorphism is when a parent class reference is used to refer to a child class object
 int main(){
     Employee employee1 = Employee("Shem Ndaro Ngugi", "Techsol Kenya", 35);
     employee1.Employee_Details();
@@ -123,6 +136,17 @@ int main(){
     Teacher t1 = Teacher("Scholar", "Microsoft", 22, "Data Structures and Algorithms");
     t1.Prepare_lesson();
     t1.AskForPromotion();
+//polymorphism
+
+// t1.Work();
+// d.Work();
+
+   Employee *e1= &d;
+   Employee *e2= &t1;
+
+   e1-> Work();
+   e2-> Work();
+    
 
     return 0;
 }
